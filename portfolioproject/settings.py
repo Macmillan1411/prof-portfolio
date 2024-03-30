@@ -122,6 +122,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static/'] #settings for static folder
 
+STATIC_ROOT = BASE_DIR / "staticfiles" # settings for deployment 
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage" #deployeent settings
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
