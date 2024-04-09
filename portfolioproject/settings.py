@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(8k0y(%-0l4pyar7skd%!%3#yi7(u@jjb070bsuh1_$_l#3m7@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['macmillan.pythonanywhere.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['macmillangudo.online','www.macmillangudo.online','127.0.0.1']
 
 
 # Application definition
@@ -141,7 +141,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "users.CustomUser"
 
 
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = '60de2779dd34f3'
 EMAIL_HOST_PASSWORD = '16ce809e35c6bd'
 EMAIL_PORT = '2525'
+
+# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'postmaster@sandboxd86849e3211c41a3a3a82318724fa6e4.mailgun.org'
+EMAIL_HOST_PASSWORD = 'be7d9e8f1eb419b8e9202f6edbd3ca54-f68a26c9-fe3bd5d7'
+
+
