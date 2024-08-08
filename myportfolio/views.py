@@ -2,13 +2,15 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.http import JsonResponse
+from .models import Project
 
 # Create your views here.
 def home(request):
     return render(request,'home.html')
 
 def projects(request):
-    return render(request,'projects.html')
+    projects = Project.objects.all()
+    return render( request,'projects.html', {'projects':projects} )
 
 def resume(request):
     return render(request,'resume.html')

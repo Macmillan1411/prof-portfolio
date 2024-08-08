@@ -7,3 +7,5 @@ urlpatterns = [
     path('contact/',views.contact,name = 'contact'),
     path('resume/',views.resume,name = 'resume'),
 ]
+
+
